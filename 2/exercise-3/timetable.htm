@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Timetable</title>
+    <style>
+        body {
+            font: 12px/18px "Lucida Grande", Arial, Verdana, sans-serif;
+        }
+
+        #content {
+            width:1024px;
+            margin: 0 50px 0 50px;
+        }
+
+        #classes {
+            display:inline-block;
+            margin-top:20px;
+            float:right;
+            width:25%;
+        }
+
+        .class {
+            display:none;
+        }
+
+        .class > p > a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .class > p > a:hover {
+            text-decoration: underline;
+        }
+
+        #timetable {
+            display:inline-block;
+            width:70%;
+            border-spacing: 15px 30px;
+
+        }
+
+        th, td {
+            width:100px;
+        }
+
+        th {
+            font-size:14px;
+            border-bottom: 1px solid #d4d4d4;
+            font-weight:100;
+        }
+
+        td {
+            border-bottom: 1px dotted #d4d4d4;
+        }
+
+        tr > .time {
+            border-bottom:none;
+        }
+
+        .spacer {
+            visibility:hidden;
+        }
+
+        td:nth-child(1) {
+            text-align:center;
+        }
+
+        .event {
+            cursor:default;
+            vertical-align: top;
+            margin-left:10px;
+            padding-left:10px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius:    5px;
+            -webkit-border-radius: 5px;
+            -khtml-border-radius:  5px;
+            border-radius: 5px;
+        }
+
+        .event > .title {
+            font-weight:bold;
+        }
+
+        .event.tdt4160 {
+            color: #1fa031;
+            background-color:rgb(186,231,177);
+        }
+
+        .event.it2805 {
+            color: #3990c5;
+            background-color:rgb(175,207,236);
+        }
+
+        .event.tdt4120 {
+            color: #9e3d9e;
+            background-color:rgb(229,172,218);
+        }
+
+        .event.it1901 {
+            color: #d3b293;
+            background-color:rgb(247,242,211);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+
+        <div id="classes">
+            <div class="class it2805">
+                <h2>Webteknologi</h2>
+                <p>I dette emnet er det fokus på World Wide Web som en plattform
+                   for interaktive applikasjoner, publisering av informasjon og
+                   sosiale tjenester.
+               </p>
+                <p>Utvikling av web-applikasjoner krever brei
+                   kunnskap om den underliggende teknologien, formater og standarder
+                   som World Wide Web bygger på og i dette emnet lærer du om den
+                   underliggende kommunikasjonsprotokollen HTTP, markup språk som
+                   HTML, XHTML og XML, språk for å spesifisere formattering og
+                   transformasjoner som CSS og XSLT, event-basert programmering
+                   på klient-siden og dokumentmodellen DOM, interaktiv grafikk og
+                   multimediainnhold på web.
+               </p>
+               <p> Emnet gir også en innføring i søkemotorer
+                   og webindekser og aspekter ved innholdsforvaltning som standardiserte
+                   beskrivelser av innhold og regelverk for opphavsrett.
+               </p>
+               <p>
+                   <a href="http://www.ntnu.no/studier/emner/IT2805" target="_blank">Les mer ...</a>
+               </p>
+            </div>
+
+            <div class="class tdt4160">
+                <h2 >Datamaskiner grunnkurs</h2>
+                <p>Emnet vil inneholde terminologi, prinsipper og begrep for
+                   konstruksjon og virkemåte for ulike typer moderne datamaskiner og
+                   annet datateknisk utstyr. Kort historisk oversikt over
+                   datateknikkens utvikling. Oppbygging (organisering), virkemåte og
+                   realisering av datamaskiner og datamaskinsystemer.
+
+                <p>Datamaskinkonstruksjon på forskjellige nivå, instruksjonsformat,
+                   adresseringsmodi, prosessorarkitekturer og -typer. Grensesnitt
+                   mellom maskinvare og programvare, sammenkobling av komponenter,
+                   avbrudd, busser, lagerhierarki og hurtigbuffer (Eng. cache).
+                   Gjennomgang av sentrale datatekniske utstyrsenheter (periferi-enheter).
+               </p>
+               <p>Kort introduksjon til distribuerte systemer, innebygde ("embedded") systemer,
+                  parallelle datamaskiner, nye teknologier og nye anvendelser (applikasjoner).
+               </p>
+               <p>
+                   <a href="http://www.ntnu.no/studier/emner/TDT4160" target="_blank">Les mer ...</a>
+               </p>
+            </div>
+
+            <div class="class tdt4120">
+                <h2>Algoritmer og datastrukturer</h2>
+                <p>Metoder for å analysere effektiviteten av algoritmer, splitt- og
+                   hersk-teknikker, rekursive løsningsmetoder. Metoder for ordning,
+                   søking i og sortering av datamengder. Datastrukturer for effektiv
+                   gjenfinning av data, dynamisk programmering og grådighetsalgoritmer.
+               </p>
+               <p>Datastrukturer for etablering av grafer og nettverk, samt metoder
+                  for gjennomløping og leting. Algoritmer for å finne beste vei(er)
+                  og koplinger (matchinger), spenntrær og maksimal flyt. Teori for
+                  problemkompleksitet.
+               </p>
+               <p>Algoritmene uttrykkes mest mulig språkuavhengig.
+               </p>
+               <p>
+                   <a href="http://www.ntnu.no/studier/emner/TDT4120" target="_blank">Les mer ...</a>
+               </p>
+            </div>
+
+            <div class="class it1901">
+                <h2>Prosjekt 1</h2>
+                <p>Kunnskap om metoder og teorier for organisering av gruppe-programmeringsprosjekter.
+                   Forståelse for samspillet mellom prosess og produkt-orienterte utfordringer
+                   og aktiviteter i et programmeringsprosjekt.
+               </p>
+               <p>Praktiske ferdigheter i programmering og integrasjonen av ulike
+                  komponenter for å sette sammen et større software-produkt.
+               </p>
+               <p>Har kompetanse i gruppesamarbeid og kan reflektere over både tekniske
+                  og organisatoriske aspekter av et programmeringsprosjekt.
+               </p>
+               <p>
+                   <a href="http://www.ntnu.no/studier/emner/IT1901" target="_blank">Les mer ...</a>
+               </p>
+            </div>
+        </div>
+
+        <table id="timetable">
+    	    <tbody>
+                <tr>
+            		<th class="spacer"></th>
+            		<th>Mon</th>
+            		<th>Tue</th>
+            		<th>Wed</th>
+            		<th>Thu</th>
+            		<th>Fri</th>
+            	</tr>
+            	<tr>
+            		<td class="time">08:00</td>
+            		<td></td>
+            		<td></td>
+            		<td rowspan="3" class="event it2805">
+                        <div class="time">08:15</div>
+                        <div class="title">Forelesning i Webteknologi</div>
+                    </td>
+            		<td></td>
+            		<td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">09:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            		<td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">10:00</td>
+            		<td rowspan="3" class="event tdt4160">
+                        <div class="time">10:15</div>
+                        <div class="title">Forelesning i Datamaskiner grunnkurs</div>
+                    </td>
+            		<td></td>
+            		<td></td>
+            		<td rowspan="2" class="event tdt4120">
+                      <div class="time">10:15</div>
+                      <div class="title">Forelesning i Algoritmer og datastrukturer</div>
+                    </td>
+
+            	</tr>
+            	<tr>
+            		<td class="time">11:00</td>
+            		<td></td>
+                    <td rowspan="2" class="event it1901">
+                        <div class="time">11:15</div>
+                        <div class="title">Forelesning i Prosjekt 1</div>
+                    </td>
+                    <td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">12:00</td>
+
+                    <td rowspan="3" class="event tdt4120">
+                        <div class="time">12:15</div>
+                        <div class="title">Forelesning og øving i Algoritmer og datastrukturer</div>
+                    </td>
+                    <td></TD>
+                    <td rowspan="2" class="event it2805">
+                          <div class="time">12:15</div>
+                          <div class="title">Forelesning i Webteknologi</div>
+                      </td>
+            	</tr>
+
+                <tr>
+            		<td class="time">13:00</td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+            	</tr>
+
+            	<tr>
+            		<td class="time">14:00</td>
+            		<td rowspan="3" class="event it2805">
+                        <div class="time">14:15</div>
+                        <div class="title">Forelesning i Webteknologi</div>
+                    </td>
+            		<td></td>
+            		<td></td>
+                    <td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">15:00</td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+                    <td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">16:00</td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+            	</tr>
+            	<tr>
+            		<td class="time">17:00</td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+            		<td></td>
+                    <td></td>
+            	</tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+       /**
+        * Underline the current hour on the table
+        */
+        var date = new Date ();
+        var day  = date.getDay ();
+        var hour = date.getHours ();
+
+        /* Bold out the current hour */
+        var hours = document.querySelectorAll("tr");
+            hours = Array.prototype.slice.call(hours, 1);
+
+        var position = hour - 8;
+        if (hours[position] !== undefined)
+             hours[position].style.fontWeight = 'bold';
+
+        /* Bold out the current day */
+        var days = document.querySelectorAll("th");
+            days = Array.prototype.slice.call(days, 1);
+
+        var position = day - 1;
+        if (days[position] !== undefined)
+            days[position].style.fontWeight = 'bold';
+
+        /**
+         * Show descriptions of a class onmouseover
+         */
+        var classes      = document.getElementsByClassName("event");
+        var descriptions = document.getElementsByClassName("class");
+
+        /* Iterate each class-element */
+        for (i = 0; i < classes.length; i++) {
+
+            /* Attach mouseover-event */
+            classes[i].addEventListener('mouseover', function (event) {
+                var classCode = event.target.className.split(' ')[1];
+
+                /* Child-element (title or time) of class */
+                if (classCode === undefined)
+                    classCode = event.target.parentElement.className.split(' ')[1];
+
+                /* Iterate each description and hide */
+                for (c = 0; c < classes.length; c++)
+                    if (descriptions[c] instanceof HTMLElement)
+                        descriptions[c].style.display = 'none';
+
+                /* Show the matched description */
+                document.getElementsByClassName(classCode)[0].style.display = 'block';
+            }, false);
+        }
+    </script>
+</body>
+</html>
