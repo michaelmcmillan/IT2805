@@ -2,7 +2,9 @@ IT2805 - Web Technologies
 ================
 
 This repository contains all my assignments in the IT2805 class at Norwegian
-University of Science and Technology.
+University of Science and Technology. Feel free to use the deploy.sh script
+to automatically deploy your code to the folk.ntnu.no server. If you hook it
+into git, it will automatically get pushed whenever you commit changes.
 
 #### Course description
 The focus in this course is on the World Wide Web as a platform for interactive
