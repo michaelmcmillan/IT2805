@@ -22,7 +22,8 @@ section#main {
 
 
 footer, #pagination {
-    margin-top: 100px;
+    padding-top:100px;
+
     clear:both;
 }
 
