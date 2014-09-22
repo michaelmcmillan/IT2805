@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, serif;
     font-size:12px;
     font-style: normal;
     line-height: 18px;
@@ -9,6 +9,10 @@ body {
 
 header, nav, footer {
     text-align:center;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -49,5 +53,5 @@ img.campus {
 
 img.storyboard {
     max-width:600px;
-    
+
 }
