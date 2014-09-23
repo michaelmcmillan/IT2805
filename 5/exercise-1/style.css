@@ -1,0 +1,57 @@
+
+
+body {
+    font-family: Georgia, serif;
+    font-size:12px;
+    font-style: normal;
+    line-height: 18px;
+}
+
+header, nav, footer {
+    text-align:center;
+}
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width:100%;
+}
+
+section#main {
+    width:600px;
+    margin: 50px auto;
+}
+
+
+footer, #pagination {
+    padding-top:100px;
+
+    clear:both;
+}
+
+footer > p {
+    line-height:5px;
+}
+
+#pagination > a:nth-child(2) {
+    float:right;
+}
+
+h2 {
+    font-size: 1.4em;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+img.campus {
+    float:right;
+    width:250px;
+    margin-left:20px;
+}
+
+img.storyboard {
+    max-width:600px;
+
+}
