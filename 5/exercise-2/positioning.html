@@ -12,21 +12,26 @@
 		top: 10px;
 		left: 10px;
 		border: 2px solid black;
+		position:relative;
 	}
 
-	#two{
-		
+	.littlebox {
+		position:absolute;
+		width: 100px;
+		height: 100px;
+		margin: 2px;
 	}
 
 	#three{
-		
+		left: 496px;
+		top: 150px;
+		background-color:#9C8951;
 	}
 
 	#four{
-
+		bottom:0;
+		background-color:#47ABDE;
 	}
-
-
 	</style>
 
 	</head>
@@ -35,9 +40,9 @@
 		<body>
 
 			<div id="one">
-				<div id="two"><img src="bearOne.jpg"></div>	
-				<div id="four"></div>
-				<div id="three"></div>
+				<div class="littlebox" id="two"><img src="bearOne.jpg"></div>
+				<div class="littlebox" id="four"></div>
+				<div class="littlebox" id="three"></div>
 
 			</div>
 
