@@ -1,0 +1,109 @@
+body {
+    font: 12px/18px "Lucida Grande", Arial, Verdana, sans-serif;
+}
+
+header, nav, footer {
+    text-align:center;
+}
+
+#content {
+    width:1024px;
+    margin: 0 50px 0 50px;
+}
+
+#classes {
+    display:inline-block;
+    margin-top:20px;
+    float:right;
+    width:25%;
+}
+
+.class {
+    display:none;
+}
+
+.class > p > a {
+    color: gray;
+    text-decoration: none;
+}
+
+.class > p > a:hover {
+    text-decoration: underline;
+}
+
+#timetable {
+    display:inline-block;
+    width:70%;
+    border-spacing: 15px 30px;
+
+}
+
+th, td {
+    width:100px;
+}
+
+th {
+    font-size:14px;
+    border-bottom: 1px solid #d4d4d4;
+    font-weight:100;
+}
+
+td {
+    border-bottom: 1px dotted #d4d4d4;
+}
+
+tr > .time {
+    border-bottom:none;
+}
+
+.spacer {
+    visibility:hidden;
+}
+
+td:nth-child(1) {
+    text-align:center;
+}
+
+.event {
+    cursor:default;
+    vertical-align: top;
+    margin-left:10px;
+    padding-left:10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius:  5px;
+    border-radius: 5px;
+}
+
+.event > .title {
+    font-weight:bold;
+}
+
+.event.tdt4160 {
+    color: #1fa031;
+    background-color:rgb(186,231,177);
+}
+
+.event.it2805 {
+    color: #3990c5;
+    background-color:rgb(175,207,236);
+}
+
+.event.tdt4120 {
+    color: #9e3d9e;
+    background-color:rgb(229,172,218);
+}
+
+.event.it1901 {
+    color: #d3b293;
+    background-color:rgb(247,242,211);
+}
+
+header {
+    text-align: center;
+}
+
+img.portrait {
+    max-width: 250px;
+}
