@@ -7,34 +7,16 @@ body {
     line-height: 18px;
 }
 
-header, footer {
+header, nav, footer {
     text-align:center;
-}
-
-nav {
-    display:inline-block;
-    width:20%;
-    margin-left:50px;
-}
-
-nav > ul {
-    float:top;
 }
 
 #content {
     width:100%;
 }
 
-#wrapper {
-    width:900px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
 section#main {
-    display:inline-block;
-    width:50%;
-
+    width:600px;
 }
 
 
@@ -67,4 +49,22 @@ img.campus {
 img.storyboard {
     max-width:600px;
 
+}
+
+#wrapper {
+    width: 75%;
+    margin: 50px auto;
+}
+
+#main {
+    display:inline-block;
+    width:500px !important;
+}
+
+nav {
+    vertical-align: top;
+    margin-right:50px;
+    text-align:left;
+    display:inline-block;
+    width:20%;
 }
