@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Student form</title>
+        <style>
+            .field {
+                margin-bottom:10px;
+            }
+
+            label {
+                display:block;
+                clear:both;
+            }
+
+            :required:focus {
+                border: 3px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+
+            <h1>Student form</h1>
+            <form method="post" action="http://www.idi.ntnu.no/~michailg/IT2805/form.php">
+
+                <div class="field">
+                    <label for="name">Your name.</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Your e-mail.</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="address">Your address.</label>
+                    <input type="text" name="address">
+                </div>
+
+                <div class="field">
+                    <label for="phone">Your phone number.</label>
+                    <input type="tel" name="phone">
+                </div>
+
+                <div class="field">
+                    <label for="startDate">Your expected start date.</label>
+                    <input type="date" name="startDate" required>
+                </div>
+
+                <div class="field">
+                    <label for="year">Your student type.</label>
+                    <select name="year" required>
+                        <option value="1">1st Year-Freshman</option>
+                        <option value="2">2nd Year-Sophmore</option>
+                        <option value="3">3rd Year-Junior</option>
+                        <option value="4">4th Year-Senior</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="classes[]">Classes you are interested in.</label>
+                    <select name="classes[]" multiple required>
+                        <option value="ITX1001">ITX1001: HTML Basics</option>
+                        <option value="ITX1002">ITX1002: URLs and Site Structures</option>
+                        <option value="ITX2001">ITX2001: Introduction to Cascading Style Sheets (CSS)</option>
+                        <option value="ITX2002">ITX2002: CSS Properties and Applications</option>
+                        <option value="ABC1001">ABC1001: Working with Multimedia on the Web</option>
+                        <option value="ITX1002">ITX1002: JSX1000: Introduction to JavaScript</option>
+                        <option value="ITX2001">ITX2001: JSX1040: JavaScript: DOM</option>
+                        <option value="ITX2002">ITX2002: XML1000: XML: Formatting Namespace Trees</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="comments">Any notes or comments you may have.</label>
+                        <textarea name="comments" rows="4" cols="50"></textarea>
+                </div>
+
+                <div class="field">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
