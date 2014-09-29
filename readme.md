@@ -1,10 +1,24 @@
 IT2805 - Web Technologies
 ================
 
+#### What is this?
 This repository contains all my assignments in the IT2805 class at Norwegian
-University of Science and Technology. Feel free to use the deploy.sh script
-to automatically deploy your code to the folk.ntnu.no server. If you hook it
-into git, it will automatically get pushed whenever you commit changes.
+University of Science and Technology.
+
+#### Deployment-script
+The deployment-script executes the following commands to sync the webserver on
+folk.ntnu.no with the master branch of this repo. Feel free to modify to your own
+needs.
+
+Replace the <code>public_html/it2805</code>
+directory with whatever directory you use. Furthermore change the url of the <code>wget</code> to
+point to your repo. Optionally hook it into git to automate deployment.
+```bash
+  cd public_html/it2805;
+  wget "https://github.com/michaelmcmillan/IT2805/tarball/master";
+  tar -xvf "master" --strip 1;
+  rm master*;
+```
 
 #### Course description
 The focus in this course is on the World Wide Web as a platform for interactive
