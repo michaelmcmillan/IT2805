@@ -1,9 +1,15 @@
-IT2805 - Web Technologies
+IT2805 - Web Technologies ![Build Status](https://travis-ci.org/n1k0/casperjs.png?branch=master)
 ================
 
 #### What is this?
 This repository contains all my assignments in the IT2805 class at Norwegian
 University of Science and Technology.
+
+### Testing
+For fun I've written a handful of tests with CasperJS. CasperJS will spawn a
+virtual browser and assert different things for each exercise. Whenever a push
+to <code>master</code> is done, [Travis-CI](http://travis-ci.org/n1k0/casperjs)
+will run the tests and email me if anything broke.
 
 #### Deployment-script
 The deployment-script executes the following commands to sync the webserver on
