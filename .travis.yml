@@ -8,9 +8,9 @@ before_script:
   - export PATH=$PATH:$PWD/casperjs-1.0.2/bin/
   - phantomjs --version
   - casperjs --version
-  - php -S localhost:8080
+  - /home/travis/.phpenv/shims/php -S localhost:8080
   - sleep 3
 
 script:
   - cd test
-  - casperjs test assignment-*-*.js --server=http://localhost:8080   
+  - casperjs test assignment-*-*.js --server=http://localhost:8080
