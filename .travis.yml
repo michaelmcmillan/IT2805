@@ -4,12 +4,13 @@ php:
   - 5.4
 
 before_script:
+  - sudo apt-get install php5
   - wget https://github.com/n1k0/casperjs/archive/1.0.2.tar.gz -O /tmp/casper.tar.gz
   - tar -xvf /tmp/casper.tar.gz
   - export PATH=$PATH:$PWD/casperjs-1.0.2/bin/
   - phantomjs --version
   - casperjs --version
-  - php -S localhost:8080
+  - nohup php -S localhost:8080 > /dev/null 2>&1 &
   - sleep 3
 
 script:
