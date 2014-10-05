@@ -9,7 +9,10 @@ University of Science and Technology.
 For fun I've written a handful of tests with CasperJS. CasperJS will spawn a
 virtual browser and assert different things for each exercise. Whenever a push
 to <code>master</code> is done, [Travis-CI](http://travis-ci.org/n1k0/casperjs)
-will run the tests and email me if anything broke.
+will run the tests and yell at me if anything broke.
+
+Testing UI is difficult, which is why only a handful of the exercises are covered.
+The exercises which are not covered are usually open for interpretation by the student. 
 
 #### Deployment-script
 The deployment-script executes the following commands to sync the webserver on
