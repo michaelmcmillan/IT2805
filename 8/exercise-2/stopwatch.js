@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     });
 
     setInterval(function () {
-        console.log(stopwatch.toString());
         elements.display.textContent = stopwatch.toString();
     }, 1);
 });
