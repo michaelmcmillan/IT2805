@@ -1,8 +1,8 @@
 
-casper.test.begin('Assignment 8-2: Create a stopwatch', 3, function suit (test) {
+casper.test.begin('Assignment 8-3: Create a stopwatch', 3, function suit (test) {
     var server = casper.cli.get("server");
 
-    casper.start(server + '/8/exercise-2/index.html');
+    casper.start(server + '/8/exercise-3/index.html');
 
     /* Start the stopwatch */
     casper.then(function() {
