@@ -31,7 +31,7 @@ function Stopwatch () {
                        .slice(-2)
                 + ':' +
 
-                ('0' + Number(this.elapsedTime   / 100  % 60)
+                ('0' + Number(this.elapsedTime   / 100   % 60)
                        .toFixed(3))
                        .slice(-6);
     }
