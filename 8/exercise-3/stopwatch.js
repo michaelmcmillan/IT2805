@@ -23,7 +23,7 @@ function Stopwatch () {
     }
 
     this.toString = function () {
-        return  ('0' + parseInt(this.elapsedTime / 6000) % 60 % 60)
+        return  ('0' + parseInt(this.elapsedTime / 360000) % 60)
                        .slice(-2)
                 + ':' +
 
