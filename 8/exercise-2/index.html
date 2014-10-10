@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function (event) {
+                var towns = [
+                    'Oslo', 'Trondheim', 'Kristiansand',
+                    'Glasgow', 'Edinburgh', 'Dundee',
+                    'Berlin', 'Amsterdam', 'Kiel',
+                    'Paris'
+                ];
+
+                document.getElementById('randomTown').textContent = towns[parseInt((Math.random() * towns.length))];
+            });
+        </script>
+    </head>
+    <body>
+        <output id="randomTown"></output>
+    </body>
+</html>
