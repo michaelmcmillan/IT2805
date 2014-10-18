@@ -4,12 +4,12 @@
  */
 function Table (element) {
 
-    this.element = element;
-    this.rows    = [];
+    var element = element;
+    var rows    = [];
 
     for (child in element.children)
         if (element.children[child] instanceof HTMLTableRowElement)
-            this.rows.push(element.children[child]);
+            rows.push(element.children[child]);
 
     this.comparators = {
         general: function (column) {
@@ -24,17 +24,17 @@ function Table (element) {
     };
 
     this.sort = function (comparator, column) {
-        this.rows = this.rows.sort(comparator(column));
+        rows = rows.sort(comparator(column));
         this.redraw();
     }
 
     this.redraw = function () {
-        var rowCount = this.rows.length;
+        var rowCount = rows.length;
         while (--rowCount)
-            this.element.deleteRow(rowCount);
+            element.deleteRow(rowCount);
 
-        for (row in this.rows)
-            this.element.appendChild(this.rows[row]);
+        for (row in rows)
+            element.appendChild(rows[row]);
     }
 }
 
