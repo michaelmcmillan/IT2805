@@ -14,8 +14,8 @@ function Table (element) {
     this.comparators = {
         general: function (column) {
             return function (a, b) {
-                a = a.children[column].innerText;
-                b = b.children[column].innerText;
+                a = a.children[column].textContent;
+                b = b.children[column].textContent;
                 if (a > b) return  1;
                 if (a < b) return -1;
                 return 0;
