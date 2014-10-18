@@ -126,6 +126,9 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.list.addEventListener('click', function (event) {
         if (event.target instanceof HTMLInputElement)
             todoList.toggleTask(event.target.parentNode.id);
+
+        if (event.target instanceof HTMLLIElement)
+            todoList.toggleTask(event.target.id);
     });
 
     elements.clear.addEventListener('click', function (event) {

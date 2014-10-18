@@ -44,6 +44,10 @@ ul#list > li > input[type="checkbox"] {
     margin-right:15px;
 }
 
+li {
+    cursor:pointer;
+}
+
 li.strike {
     font-style: italic;
     color: gray;
