@@ -8,8 +8,7 @@ function List (element) {
     var tasks   = [];
 
     this.addTask = function (task) {
-        if (task instanceof Task
-        &&  task.getText())
+        if (task instanceof Task && task.getText())
             tasks.push(task), this.redraw();
     }
 
@@ -42,7 +41,6 @@ function List (element) {
     }
 
     this.load = function () {
-
         if (window.localStorage.list) {
             var storedTasks = JSON.parse(window.localStorage.list);
             for (storedTask in storedTasks)
@@ -128,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.list.addEventListener('click', function (event) {
         if (event.target instanceof HTMLInputElement)
             todoList.toggleTask(event.target.parentNode.id);
-    })
+    });
 
     elements.clear.addEventListener('click', function (event) {
         todoList.clearCompleted();
