@@ -9,7 +9,7 @@ function List (element) {
 
     this.addTask = function (task) {
         if (task instanceof Task
-        &&  task.getText())    
+        &&  task.getText())
             tasks.push(task), this.redraw();
     }
 
@@ -19,9 +19,9 @@ function List (element) {
     }
 
     this.clearCompleted = function () {
-        for (task in tasks)
-            if (tasks[task].isCompleted())
-                tasks.splice(task, 1);
+        for (var i = tasks.length; i--;)
+            if (tasks[i].isCompleted())
+                tasks.splice(i, 1);
 
         this.redraw();
     }
