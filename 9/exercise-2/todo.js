@@ -33,12 +33,15 @@ function List (element) {
     }
 
     this.load = function () {
-        var storedTasks = JSON.parse(localStorage.list);
-        for (storedTask in storedTasks)
-            this.addTask(new Task(
-                storedTasks[storedTask].text,
-                storedTasks[storedTask].completed
-            ));
+
+        if (window.localStorage.list !== 'undefined') {
+            var storedTasks = JSON.parse(window.localStorage.list);
+            for (storedTask in storedTasks)
+                this.addTask(new Task(
+                    storedTasks[storedTask].text,
+                    storedTasks[storedTask].completed
+                ));
+        }
     }
 
     this.save = function () {
