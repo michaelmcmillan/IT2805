@@ -34,7 +34,7 @@ function List (element) {
 
     this.load = function () {
 
-        if (window.localStorage.list !== 'undefined') {
+        if (window.localStorage.list) {
             var storedTasks = JSON.parse(window.localStorage.list);
             for (storedTask in storedTasks)
                 this.addTask(new Task(
