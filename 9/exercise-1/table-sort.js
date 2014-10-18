@@ -16,8 +16,8 @@ function Table (element) {
             return function (a, b) {
                 a = a.children[column].innerText;
                 b = b.children[column].innerText;
+                if (a > b) return  1;
                 if (a < b) return -1;
-                if (a > b) return 1;
                 return 0;
             };
         }
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var table = new Table (existingTable);
 
-    buttons.firstButton.addEventListener('click', function (event) {
+    buttons.firstButton.addEventListener('click',  function (event) {
         table.sort(table.comparators.general, 0);
     });
 
@@ -58,8 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         table.sort(table.comparators.general, 1);
     });
 
-    buttons.thirdButton.addEventListener('click', function (event) {
+    buttons.thirdButton.addEventListener('click',  function (event) {
         table.sort(table.comparators.general, 2);
     });
-
 });
