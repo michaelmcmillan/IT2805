@@ -17,6 +17,14 @@ function List (element) {
         this.redraw();
     }
 
+    this.clearCompleted = function () {
+        for (task in tasks)
+            if (tasks[task].isCompleted())
+                tasks.splice(tasks.indexOf(tasks[task]), 1);
+
+        this.redraw();
+    }
+
     this.redraw = function () {
         var taskCount = element.childNodes.length;
 
@@ -45,11 +53,7 @@ function List (element) {
     }
 
     this.save = function () {
-        window.localStorage.setItem('list', this.toJSON());
-    }
-
-    this.toJSON = function () {
-        return JSON.stringify(tasks);
+        window.localStorage.setItem('list', JSON.stringify(tasks));
     }
 }
 
@@ -105,8 +109,9 @@ function Task (text, completed) {
 document.addEventListener('DOMContentLoaded', function () {
 
     var elements = {
-        todo: document.getElementsByName('todo')[0],
-        list: document.getElementById('list')
+        todo:  document.getElementsByName('todo')[0],
+        list:  document.getElementById('list'),
+        clear: document.getElementsByTagName('sup')[0]
     }
 
     var todoList = new List (list);
@@ -123,4 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.target instanceof HTMLInputElement)
             todoList.toggleTask(event.target.parentNode.id);
     })
+
+    elements.clear.addEventListener('click', function (event) {
+        todoList.clearCompleted();
+    });
 });

@@ -21,6 +21,11 @@ div#todolist > h1 {
     margin-bottom:10px;
 }
 
+h1 > sup {
+    position:absolute;
+    font-size:10px;
+}
+
 input[name="todo"] {
     font-size:20px;
     padding:0px 10px;
