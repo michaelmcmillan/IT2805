@@ -22,6 +22,7 @@ div#todolist > h1 {
 }
 
 h1 > sup {
+    cursor:pointer;
     position:absolute;
     font-size:10px;
 }
