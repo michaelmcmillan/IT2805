@@ -8,7 +8,8 @@ function List (element) {
     var tasks   = [];
 
     this.addTask = function (task) {
-        if (task instanceof Task)
+        if (task instanceof Task
+        &&  task.getText())    
             tasks.push(task), this.redraw();
     }
 
@@ -20,7 +21,7 @@ function List (element) {
     this.clearCompleted = function () {
         for (task in tasks)
             if (tasks[task].isCompleted())
-                tasks.splice(tasks.indexOf(tasks[task]), 1);
+                tasks.splice(task, 1);
 
         this.redraw();
     }
