@@ -108,9 +108,10 @@ function Task (text, completed) {
 document.addEventListener('DOMContentLoaded', function () {
 
     var elements = {
-        todo:  document.getElementsByName('todo')[0],
-        list:  document.getElementById('list'),
-        clear: document.getElementsByTagName('sup')[0]
+        todo  : document.getElementsByName('todo')[0],
+        list  : document.getElementById('list'),
+        clear : document.getElementsByTagName('sup')[0],
+        toggle: document.getElementById('toggle')
     }
 
     var todoList = new List (list);
@@ -129,6 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (event.target instanceof HTMLLIElement)
             todoList.toggleTask(event.target.id);
+
+        elements.toggle.play();
     });
 
     elements.clear.addEventListener('click', function (event) {
