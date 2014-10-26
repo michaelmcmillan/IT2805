@@ -1,0 +1,31 @@
+<!ELEMENT bank (accounts, customers, customer_accounts)>
+
+<!ELEMENT accounts (checking_accounts, savings_accounts)>
+
+<!ELEMENT savings_accounts (savings_account)*>
+<!ELEMENT checking_accounts (checking_account)*>
+
+<!ELEMENT savings_account (balance)>
+<!ELEMENT checking_account (balance)>
+
+<!ELEMENT balance (#PCDATA)>
+<!ATTLIST savings_account
+    id       ID    #REQUIRED
+    interest CDATA #REQUIRED>
+
+<!ATTLIST checking_account
+    id       ID    #REQUIRED>
+
+<!ELEMENT customers (customer)*>
+<!ELEMENT customer (name, address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ATTLIST customer
+    id       ID    #REQUIRED>
+
+<!ELEMENT customer_accounts (customer_account)*>
+<!ELEMENT customer_account EMPTY>
+<!ATTLIST customer_account
+    c_id     IDREF #REQUIRED
+    ac_id    IDREF #REQUIRED>

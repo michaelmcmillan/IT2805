@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bank>
+<!DOCTYPE bank [
 
+<!ELEMENT bank (accounts, customers, customer_accounts)>
+
+<!ELEMENT accounts (checking_accounts, savings_accounts)>
+
+<!ELEMENT savings_accounts (savings_account)*>
+<!ELEMENT checking_accounts (checking_account)*>
+
+<!ELEMENT savings_account (balance)>
+<!ELEMENT checking_account (balance)>
+
+<!ELEMENT balance (#PCDATA)>
+<!ATTLIST savings_account
+    id       ID    #REQUIRED
+    interest CDATA #REQUIRED>
+
+<!ATTLIST checking_account
+    id       ID    #REQUIRED>
+
+<!ELEMENT customers (customer)*>
+<!ELEMENT customer (name, address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ATTLIST customer
+    id       ID    #REQUIRED>
+
+<!ELEMENT customer_accounts (customer_account)*>
+<!ELEMENT customer_account EMPTY>
+<!ATTLIST customer_account
+    customer_id     IDREF #REQUIRED
+    account_id      IDREF #REQUIRED>
+
+]>
+
+<bank>
   <accounts>
     <savings_accounts>
       <savings_account id="a1" interest="0.03">
         <balance>2500</balance>
       </savings_account>
-      
       <savings_account id="a2" interest="0.03">
         <balance>15075</balance>
       </savings_account>
     </savings_accounts>
-    
+
     <checking_accounts>
       <checking_account id="a3">
         <balance>4025</balance>
@@ -21,10 +55,10 @@
       </checking_account>
       <checking_account id="a5">
         <balance>325</balance>
-      </checking_account>  
+      </checking_account>
     </checking_accounts>
   </accounts>
-  
+
   <customers>
     <customer id="c1">
       <name>Ben Richerdson</name>
@@ -39,7 +73,7 @@
       <address>Lake Sight 15</address>
     </customer>
   </customers>
-  
+
   <customer_accounts>
     <customer_account customer_id="c1" account_id="a2"/>
     <customer_account customer_id="c1" account_id="a3"/>
@@ -47,5 +81,5 @@
     <customer_account customer_id="c3" account_id="a1"/>
     <customer_account customer_id="c3" account_id="a5"/>
   </customer_accounts>
-  
+
 </bank>
