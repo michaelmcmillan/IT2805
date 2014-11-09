@@ -11,38 +11,35 @@
                 /* Elements */
                 var canvas = document.getElementById('the-canvas');
                 var ctx    = canvas.getContext("2d");
-
-                /* Circle */
-                ctx.beginPath();
-                ctx.arc(100, 200, 50, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fillStyle = 'red';
-                ctx.fill();
-
-                /* Square */
-                ctx.fillStyle = 'blue';
-                ctx.fillRect(300, 150, 100, 100);
-
-                /* Image */
-                var doge   = {x: 175, y: 150};
                 var img    = new Image(80, 80);
                 img.src    = 'doge.jpg';
+
+                function animate () {
+
+                    /* Clear the canvas */
+                    ctx.clearRect(0, 0, 400, 400);
+
+                    /* Circle */
+                    ctx.beginPath();
+                    ctx.arc(100, 200, 50, 0, Math.PI * 2);
+                    ctx.closePath();
+                    ctx.fillStyle = 'red';
+                    ctx.fill();
+
+                    /* Square */
+                    ctx.fillStyle = 'blue';
+                    ctx.fillRect(300, 150, 100, 100);
+
+                    /* Doge */
+                    var pos = (Date.now()/1000 % 360) * 2 * Math.PI;
+		            var x = 140 + 140 * Math.sin(pos);
+		            var y = 140 + 140 * Math.cos(pos);
+                    ctx.drawImage(img, x, y);
+                }
+
                 img.onload = function () {
-                    ctx.drawImage(img, doge.x, doge.y);
-                };
-
-                /* Animate */
-                var radius = 150, theta = 150;
-
-                setInterval(function () {
-                    ctx.clearRect(doge.x, doge.y, img.height, img.width);
-                    angle += Math.acos(1-Math.pow(radius, 2)/2);
-
-                    doge.x = Math.floor(Math.sin(doge.x));
-                    doge.y = Math.floor(Math.cos(doge.y));
-
-                    img.onload();
-                }, 1);
+                    setInterval(animate, 1);
+                }
             });
         </script>
     </head>
