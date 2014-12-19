@@ -1,4 +1,4 @@
-IT2805 - Web Technologies ![Build Status](https://travis-ci.org/n1k0/casperjs.png?branch=master)
+IT2805 - Web Technologies [![Build Status](https://travis-ci.org/michaelmcmillan/IT2805.svg?branch=master)](https://travis-ci.org/michaelmcmillan/IT2805)
 ================
 
 #### What is this?
